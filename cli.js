@@ -446,7 +446,7 @@ function generateVerifier_original(verificationKey) {
 
     // The points
 
-    template = template.replace("<%vk_input_length%>", (verificationKey.IC.length-1).toString());
+    template = template.replace(/<%vk_input_length%>/g, (verificationKey.IC.length-1).toString());
     template = template.replace("<%vk_ic_length%>", verificationKey.IC.length.toString());
     let vi = "";
     for (let i=0; i<verificationKey.IC.length; i++) {
@@ -488,7 +488,7 @@ function generateVerifier_groth(verificationKey) {
 
     // The points
 
-    template = template.replace("<%vk_input_length%>", (verificationKey.IC.length-1).toString());
+    template = template.replace(/<%vk_input_length%>/g, (verificationKey.IC.length-1).toString());
     template = template.replace("<%vk_ic_length%>", verificationKey.IC.length.toString());
     let vi = "";
     for (let i=0; i<verificationKey.IC.length; i++) {
@@ -529,7 +529,7 @@ function generateVerifier_kimleeoh(verificationKey) {
 
     // The points
 
-    template = template.replace("<%vk_input_length%>", (verificationKey.IC.length-1).toString());
+    template = template.replace(/<%vk_input_length%>/g, (verificationKey.IC.length-1).toString());
     template = template.replace("<%vk_ic_length%>", verificationKey.IC.length.toString());
     let vi = "";
     for (let i=0; i<verificationKey.IC.length; i++) {
