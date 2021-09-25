@@ -5841,7 +5841,7 @@ async function wtnsCalculate(input, wasmFileName, wtnsFileName, options) {
     await fdWasm.close();
 
     const wc = await circom_runtime.WitnessCalculatorBuilder(wasm);
-    const w = await wc.calculateBinWitness(input);
+    const w = await wc.calculateBinWitness(input, true);
 
     const fdWtns = await binFileUtils.createBinFile(wtnsFileName, "wtns", 2, 2);
 
