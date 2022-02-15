@@ -25,6 +25,7 @@ const calculateWitness = require("./calculateWitness.js");
 
 module.exports = class Circuit {
     constructor(circuitDef) {
+        const bigInt = require("./bigint.js");
         this.nPubInputs = circuitDef.nPubInputs;
         this.nPrvInputs = circuitDef.nPrvInputs;
         this.nInputs = circuitDef.nInputs;
